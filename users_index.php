@@ -1,22 +1,10 @@
 <?php
 
 require 'database.php';
+require 'functions.php';
 
-//de sql query
-$sql = "SELECT * FROM users";
+$all_users = selectAllData('users');
 
-//hier wordt de query uitgevoerd met de database
-$result = mysqli_query($conn, $sql);
-
-$all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-
-
-/**
- * Hier loop (iterate) je over alle waardes die gevonden zijn.
- * Je kunt zoals je zien paragraaf-tags gebruiken
- * maar je kunt ook andere HTML-**tags** gebruiken
- */
 ?>
 
 <!DOCTYPE html>

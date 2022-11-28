@@ -1,22 +1,11 @@
 <?php
 
 require 'database.php';
-
-//de sql query
-$sql = "SELECT * FROM categories";
-
-//hier wordt de query uitgevoerd met de database
-$result = mysqli_query($conn, $sql);
-
-$all_categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
+require 'functions.php';
 
 
+$all_categories = selectAllData('categories');
 
-/**
- * Hier loop (iterate) je over alle waardes die gevonden zijn.
- * Je kunt zoals je zien paragraaf-tags gebruiken
- * maar je kunt ook andere HTML-**tags** gebruiken
- */
 ?>
 
 <!DOCTYPE html>
