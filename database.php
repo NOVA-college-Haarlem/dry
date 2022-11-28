@@ -2,9 +2,9 @@
 
 // Database configuratie
 $host  = "localhost";
-$dbuser = "root";
+$dbuser = "test";
 $dbpass = "";
-$dbname = "GFG";
+$dbname = "dry";
 
 // Maak een  database connectie
 $conn = mysqli_connect($host, $dbuser, $dbpass, $dbname);
